@@ -45,3 +45,11 @@ Support DIY machines so that I can continue to create and share projects like th
 Patreon: [https://www.patreon.com/diymachines](https://www.patreon.com/diymachines)
 
 Ko-fi: [https://ko-fi.com/diymachines](https://ko-fi.com/diymachines)
+
+## Build with nix
+
+```console
+$ nix develop ./Hollow-Shadow-Clock/ --command make -C ./Hollow-Shadow-Clock/hollowShadowClock
+```
+
+or just enter the devShell to do development.
