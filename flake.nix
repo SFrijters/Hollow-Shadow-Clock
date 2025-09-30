@@ -71,13 +71,12 @@
           };
 
           arduino-cli-with-packages = pkgs.wrapArduinoCLI {
-            libraries = lib.mapAttrsToList (k: v: pkgs.arduinoLibraries.${k}.${v})
-              {
-                FastLED = "3.6.0";
-                Time = "1.6.1";
-                ArduinoJson ="7.4.2";
-                "Adafruit NeoPixel" = "1.15.1";
-              };
+            libraries = lib.mapAttrsToList (k: v: pkgs.arduinoLibraries.${k}.${v}) {
+              FastLED = "3.6.0";
+              Time = "1.6.1";
+              ArduinoJson = "7.4.2";
+              "Adafruit NeoPixel" = "1.15.1";
+            };
 
             packages = [
               pkgs.arduinoPackages.platforms.esp8266.esp8266."3.1.2"
