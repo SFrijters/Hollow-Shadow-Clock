@@ -69,20 +69,6 @@ const int buttonBrightnessPin = 0;
 int colorState = 0; // 0: Red, 1: Green, 2: Blue, 3: White
 int brightnessState = 0; // 0: 15%, 1: 40%, 2: 60%, 3: 75%, 4: 0%
 
-bool getLocalTime(struct tm * info, uint32_t ms = 5000) {
-  uint32_t start = millis();
-  time_t now;
-  while ((millis() - start) <= ms) {
-    time(&now);
-    localtime_r(&now, info);
-    if (info->tm_year > (1970 - 1900)) {
-      return true;
-    }
-    delay(10);
-  }
-  return false;
-}
-
 void rotate(int step) {
   static int phase = 0;
   int i, j;
