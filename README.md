@@ -1,4 +1,4 @@
-### DIY Machines Hollow Shadow Clock - https://youtu.be/KYB3sjW5J2g 
+### DIY Machines Hollow Shadow Clock - https://youtu.be/KYB3sjW5J2g
 
 https://www.diymachines.co.uk/
 
@@ -10,10 +10,10 @@ Project time with this wifi enabled, web-serving, magically moving analouge cloc
 
 * Built in web server to program schedule of lighting colour and brightness.
 
-* Detailed build instructions video available here: https://youtu.be/KYB3sjW5J2g 
+* Detailed build instructions video available here: https://youtu.be/KYB3sjW5J2g
 
 ***
-Buy a kit of parts from Etsy here: https://diymachines.etsy.com/uk/listing/1805326144/hollow-shadow-clock-electronics-kit 
+Buy a kit of parts from Etsy here: https://diymachines.etsy.com/uk/listing/1805326144/hollow-shadow-clock-electronics-kit
 
 Download 3D Printing files here: https://www.printables.com/model/1063081-hollow-shadow-clock
 
