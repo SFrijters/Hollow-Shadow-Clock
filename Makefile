@@ -27,6 +27,12 @@ _ARDUINO_OUTPUT_DIR=$(_ARDUINO_PROJECT_DIR)/bin/$(SKETCH_NAME)
 
 all: compile upload
 
+check-permissions:
+	@echo Checking if $(SERIAL) exists
+	test -e $(SERIAL)
+	@echo Checking permissions for $(SERIAL)
+	groups | grep $$(stat $(SERIAL) --format '%G') || test $$(stat $(SERIAL) --format '%a' | cut -b 3) = 6
+
 # commonhfile.fqfn needs to be set because it needs to be in a writable directory
 compile:
 	arduino-cli compile "$(VERBOSE)" \
@@ -36,7 +42,7 @@ compile:
 	--build-path "$(_ARDUINO_BUILD_DIR)" \
 	--output-dir "$(_ARDUINO_OUTPUT_DIR)"
 
-upload:
+upload: check-permissions
 	[ -e $(SERIAL) ] && \
 	arduino-cli upload \
 	--fqbn "$(FQBN)" \
@@ -47,7 +53,7 @@ upload:
 
 # Monitor the serial output.
 # The --imap option maps '\n' to '\r\n' so newlines are newlines.
-monitor:
+monitor: check-permissions
 	picocom -b $(BAUDRATE) --imap lfcrlf $(SERIAL)
 
 clean:
